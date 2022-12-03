@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>
+   
+  </title>
+  
+  <!--to make the blue box-->
+  <style>
+   #Q8_DIV {
+    background: blue;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
+   }
+  </style>
+ </head>
+ 
+ <body style = "text-align:center;">
+  
+  <h1 style = "color:blue;" id="chg_t">
+   Various JavaScript Function
+  </h1>
+  <button onclick="change_text()">Click to change Text</button>
+
+  <!--adding space after button-->
+
+  <p id = "Q8_UP" style =
+   "font-size: 19px; font-weight: bold;">
+  </p>
+  
+  <div id = "Q8_DIV">
+   This is Div box.
+  </div>
+  <br>
+  
+  <button onClick = "Q8_Fun()">
+   click here to remove div
+  </button>
+  
+  <!--adding space after button-->
+  <p id = "Q8_DOWN" style =
+   "color: blue; font-size: 24px; font-weight: bold;">
+  </p>
+  
+
+  <!--text to insert tag-->
+  <div id="add_to_me">
+        <p>This is the text which has already been typed into the div</p>
+    </div>
+   <button onclick="addCode()">Add Stuff</button>
+
+  <!-- Script to remove HTML element -->
+  <script>
+    //changing color of text
+
+    document.getElementById("chg_t").addEventListener("mouseover", mouseOver);
+    document.getElementById("chg_t").addEventListener("mouseout", mouseOut);
+
+    function mouseOver() {
+    document.getElementById("chg_t").style.color = "red";
+    }
+
+    function mouseOut() {
+    document.getElementById("chg_t").style.color = "blue";
+    }
+
+    //Changing text
+    function change_text(){
+    document.getElementById("chg_t").innerHTML = "Text changing using javascript";
+    }
+
+    //removing tag
+   var down = document.getElementById('Q8_DOWN');
+   var div = document.getElementById('Q8_DIV');
+   up.innerHTML = "Click on button to remove the element.";
+   
+   function Q8_Fun() {
+    div.remove();
+    down.innerHTML = "Element is removed.";
+   }
+
+    //inserting tag
+    function addCode() {
+            document.getElementById("add_to_me").innerHTML += 
+              "<h3>This is the text which has been inserted by JavaScript</h3>";
+        }
+
+
+  </script>
+ </body>
+</html>     
